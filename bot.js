@@ -9,7 +9,7 @@ const http = require('http')
 http.createServer((req, res) => {
     res.writeHead(200)
     res.end('Hello world Ruslan\n')
-}).listen(process.env.PORT || 5000)
+}).listen(process.env.PORT, '0.0.0.0')
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
