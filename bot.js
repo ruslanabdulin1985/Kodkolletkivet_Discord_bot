@@ -3,13 +3,13 @@ require('dotenv').config()
 const Discord = require('discord.js')
 const client = new Discord.Client()
 const http = require('http')
-const port = 8080
+// const port = 8080
 
 // start server just to bind a port
 http.createServer((req, res) => {
     res.writeHead(200)
     res.end('Hello world Ruslan\n')
-}).listen(port)
+}).listen(process.env.PORT || 5000)
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
